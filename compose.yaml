@@ -19,7 +19,7 @@ services:
     image: wordpress:latest
     restart: always
     ports:
-      - "8082:80"    # <-- WordPress accessible sur http://IP_VM:8080
+      - "8082:80"    # <-- WordPress accessible sur http://IP_VM:8082
     environment:
       WORDPRESS_DB_HOST: wordpress-db
       WORDPRESS_DB_USER: wpuser
@@ -59,7 +59,7 @@ services:
     image: zabbix/zabbix-web-nginx-mysql:latest
     restart: always
     ports:
-      - "8085:8080"   # <-- Interface Zabbix sur http://IP_VM:8081
+      - "8085:8080"   # <-- Interface Zabbix sur http://IP_VM:8085
     environment:
       DB_SERVER_HOST: zabbix-db
       MYSQL_USER: zabbix
