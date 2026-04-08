@@ -17,10 +17,9 @@ zip -r "$ZIP_FILE" "$TOIP_DIR/"
 echo "ZIP créé : $ZIP_FILE"
 
 # 3. Transfert FTP vers OMV
-# ADAPTATION : remplace par tes infos OMV
-FTP_SERVER="IP_de_ton_OMV"     # ex: 192.168.1.100
-FTP_USER="ton_user_ftp"
-FTP_PASS="ton_pass_ftp"
+FTP_SERVER="192.168.20.42"     
+FTP_USER="jrm"
+FTP_PASS="sio123"
 FTP_DIR="archives_toip"
 
 ftp -n "$FTP_SERVER" <<EOF
