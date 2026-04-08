@@ -41,3 +41,27 @@ OwnCloud offre de nombreuses fonctionnalités avancées pour la gestion de fichi
     Versioning : Historique complet des fichiers (restaure versions précédentes).
 
     Chiffrement : Serveur-side et client-side (zero-knowledge).
+
+
+Tp-Stockage Cloud / Script
+
+Le script est : Script.sh
+Une fois sur notre machine il faut executer cette commande : chmod +x Script.sh  (elle permet de le rendre executable)
+Puis avec crontab -e on peut alors y ajouter : 
+45 23 * * * /TP_Bilan/owncloud/backup_toip.sh >> /TP_Bilan/owncloud/backup.log 2>&1
+(cela va permettre d'enregisté a 23h45)
+
+Explication du script : 
+
+**DATE=$(date +%d-%m-%Y_%H:%M:%S)  
+CSV_DST="$ARCHIVE_DIR/sio2-$DATE.csv"  
+cp "$TOIP_DIR/logs.csv" "$CSV_DST"     # Copie logs.csv → archive/**
+Ceci permet de faire la sauveguarde du CSV 
+
+**ZIP_FILE="$ARCHIVE_DIR/sio2-$DATE.zip"  **
+**zip -r "$ZIP_FILE" "$TOIP_DIR/"         **
+Permet de faire un .zip pour compresser le dossier 
+
+curl -T "$ZIP_FILE" ftp://user:pass@IP/archives_toip/
+Permet d'envoyé notre zip vers notre serveur ftp , il faut juste y ajouter le user pui l'ip de notre serveur FTP
+exemple : curl -T "$ZIP_FILE" ftp://user:jrm@192.168.20.42/archives_toip/
