@@ -14,8 +14,8 @@ Depuis un client windows nous pouvons installé le logiciel via : https://ownclo
 Il nous suffit juste a rentrer notre ip ainsi que notre port dans le logiciel (exemple : 192.168.20.42:8080)
 Notre utilisateur pourra alors synchroniser ses fichiers avec notre ownclood.
 
-OwnCloud offre de nombreuses fonctionnalités avancées pour la gestion de fichiers, utilisateurs et intégrations. Voici les principales possibilités, adaptées à un contexte pro comme ton BTS SIO.
-gestion des utilisateurs et authentification
+**OwnCloud offre de nombreuses fonctionnalités avancées pour la gestion de fichiers, utilisateurs et intégrations. Voici les principales possibilités, adaptées à un contexte pro comme ton BTS SIO.
+gestion des utilisateurs et authentification**
 
     LDAP/Active Directory : Intégration native pour importer automatiquement les utilisateurs et groupes depuis un annuaire LDAP (ex: AD Windows Server). Authentification transparente sans double compte.
 
@@ -23,7 +23,7 @@ gestion des utilisateurs et authentification
 
     SSO (Single Sign-On) : Support SAML et OAuth pour intégration entreprise.
 
-Synchronisation et accès fichiers
+**Synchronisation et accès fichiers**
 
     Clients multiplateformes : Windows, macOS, Linux, iOS, Android avec sync bidirectionnelle.
 
